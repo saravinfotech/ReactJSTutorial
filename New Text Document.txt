@@ -1,0 +1,5 @@
+install the react js framework
+	--> npm install -g create-react-app
+
+command for creating the react js project
+ 	--> npx create-react-app helloworld
