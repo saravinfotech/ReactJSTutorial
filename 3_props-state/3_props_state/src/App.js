@@ -18,9 +18,40 @@ function App() {
         >
           Learn React
         </a>
+        <Parent />
       </header>
     </div>
   );
+}
+
+class Parent extends React.Component{
+  render(){
+    return(
+      <div><h2>Just some info</h2>
+      <Car msg="hello" additionalMessage="Welcome to this tutorial" arrayProps={this.props.cars}/>
+  </div>
+    );
+  }
+}
+
+Parent.defaultProps = {
+  cars:["BMW","Audi","Merc","City"]
+}
+
+class Car extends React.Component{
+  render(){
+    return(
+      <div>
+          <h3>Cars are wonderful</h3>
+          <h6>{this.props.msg}</h6>
+          <h7>{this.props.additionalMessage}</h7>
+          <h1>{this.props.arrayProps}</h1>
+          <h2>{this.props.arrayProps.map((item,i)=>{
+              return " "+item;
+            })}</h2>
+      </div>
+    );
+  }
 }
 
 export default App;
