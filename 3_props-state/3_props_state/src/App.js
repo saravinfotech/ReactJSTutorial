@@ -50,6 +50,12 @@ App.defaultProps = {
 }
 
 class Parent extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+        cars:["BMW","Audi","Merc","City"]
+    }
+  }
   render(){
     return(
       <div><h2>Just some info</h2>
