@@ -70,11 +70,11 @@ class Car extends React.Component{
       <div>
           <h3>Cars are wonderful</h3>
           <h6>{this.props.msg}</h6>
-          <h7>{this.props.additionalMessage}</h7>
+          <h6>{this.props.additionalMessage}</h6>
           <h1>{this.props.arrayProps}</h1>
-          <h2>{this.props.arrayProps.map((item,i)=>{
-              return " "+item;
-            })}</h2>
+          <div>{this.props.arrayProps.map((item,i)=>{
+              return <p key={i}>{" "+item}</p>;
+            })}</div>
       </div>
     );
   }
